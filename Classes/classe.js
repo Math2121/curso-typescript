@@ -138,4 +138,27 @@ console.log(c1.getResult());
 c1 = new Multiplica();
 c1.executar(2, 2, 2);
 console.log(c1.getResult());
+//Singleton
+class Unique {
+    constructor() { }
+    static getInstance() {
+        return Unique.instance;
+    }
+    agora() {
+        return new Date;
+    }
+}
+Unique.instance = new Unique;
+console.log(Unique.getInstance().agora);
+//Somente leitura
+class Aviao {
+    constructor(modelo, prefixo) {
+        this.prefixo = prefixo;
+        this.modelo = modelo;
+    }
+}
+const tipo = new Aviao('Tulipa', 'PT-ABC');
+// não e perimitido atribuir valores nestes atributos
+// tipo.modelo = "55"
+console.log(tipo);
 //# sourceMappingURL=classe.js.map

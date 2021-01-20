@@ -156,3 +156,31 @@ console.log(c1.getResult())
  c1 = new Multiplica()
 c1.executar(2, 2, 2)
 console.log(c1.getResult())
+
+//Singleton
+
+class Unique{
+  private static instance: Unique = new Unique
+  private constructor() { }
+  static getInstance(): Unique {
+    return Unique.instance
+  }
+
+  agora() {
+    return new Date
+  }
+}
+
+console.log(Unique.getInstance().agora)
+
+//Somente leitura
+class Aviao{
+  public readonly modelo: string
+  constructor(modelo: string, public readonly prefixo: string) {
+    this.modelo = modelo
+  }
+}
+const tipo = new Aviao('Tulipa', 'PT-ABC')
+// não e perimitido atribuir valores nestes atributos
+// tipo.modelo = "55"
+console.log(tipo)

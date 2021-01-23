@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typescript</title>
 </head>
 
+<body style="background:#fff; text-align:center; ">
 
-
-  <body style="background:#fff; text-align:center; ">
-    <font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#25201c">
-      <table width="600" align="center" style="background:#fff; text-align:center; ">
-        <thead>
-          <tr>
-            <td colspan="2" align="center"> <br> <br> <img src="https://vwa.com.br/assets/images/logo-vwa.png" height="120" alt=""> </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="2">
-              <font face="Verdana, Arial, Helvetica, sans-serif" size="4" color="#25201c"><strong>'.$titulo.'</strong>
-                <hr>
-              </font>
-            </td>
-          </tr>
-          <tr>
-            <td><b>URL:</b></td>
-            <td>
-              "https://vwa.com.br/blog"<br><br>
-            </td>
-          </tr>
-          <tr>
-            <td height="25" colspan="2"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">
-              
-              Att. Equipe VWA .
-            </td>
-          </tr>
-          <tr>
-            <td height="25" colspan="2"></td>
-          </tr>
-        </tfoot>
-      </table>
-    </font>
-  </body>
-<script src="Classes/desafio.js"></script>
- <!-- <script src="Classes/classe.js"></script> -->
+  <!-- <script src="namespace/geometriaRet.js"></script>
+  <script src="namespace/geometriaCirc.js"></script> -->
+  <!-- <script src="namespace/modulo.js"></script> -->
+  <!-- <script src="Classes/desafio.js"></script> -->
+  <!-- <script src="Classes/classe.js"></script> -->
   <!-- <script src="Ecmascript/ecma.js"></script> -->
   <!-- <script src="compilador/compilador.js"></script>
   <script src="introdução/basico.js"></script>
   <script src="Tipos/tipo.js"></script> -->
+  <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+      SystemJS.config({
+        baseURL: '/modulos',
+        packages: {
+          'modulos': {
+            defaultJSExtension: true
+          }
+        }
+      })
+
+      SystemJS.import('./modulos/modulo.js')
+    </script>
 </body>
+
 </html>

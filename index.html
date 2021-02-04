@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/systemjs/dist/system.js"></script>
   <title>Typescript</title>
 </head>
 
 <body style="background:#fff; text-align:center; ">
-
+<script src="interfaces/interface.js"></script>
   <!-- <script src="namespace/geometriaRet.js"></script>
   <script src="namespace/geometriaCirc.js"></script> -->
   <!-- <script src="namespace/modulo.js"></script> -->
@@ -18,10 +19,10 @@
   <!-- <script src="compilador/compilador.js"></script>
   <script src="introdução/basico.js"></script>
   <script src="Tipos/tipo.js"></script> -->
-  <script src="node_modules/systemjs/dist/system.js"></script>
-    <script>
+
+    <!-- <script>
       SystemJS.config({
-        baseURL: '/modulos',
+        baseUrl: '/modulos',
         packages: {
           'modulos': {
             defaultJSExtension: true
@@ -29,7 +30,7 @@
         }
       })
 
-      SystemJS.import('./modulos/modulo.js')
+      SystemJS.import('./modulos/modulo.js') -->
     </script>
 </body>
 
